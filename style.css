@@ -102,7 +102,7 @@ section {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1em;
+    padding: 0 2em;
 }
 
 /* GLOBAL MEDIA */
@@ -125,9 +125,6 @@ img {
 }
 
 @media(min-width: 992px) {
-    section {
-        padding: 5.8em 7em 0;
-    }
 
     .title-left {
         margin-left: -2.5em;
@@ -147,10 +144,6 @@ img {
         font-size: 2.4em;
     }
 
-
-    section {
-        padding: 5.8em 11em 0;
-    }
 }
 
 
@@ -193,7 +186,7 @@ img {
 /* HERO */
 
 .hero {
-    padding: var(--space-unit);
+    padding: var(--space-unit) 0;
     align-content: center;
 }
 
@@ -201,7 +194,7 @@ img {
     display: grid;
     justify-content: left;
     align-content: center;
-    padding-left: 4vw;
+    /* padding: 0 4vw; */
 }
 
 .hero h1 {
@@ -230,7 +223,7 @@ img {
     display: grid;
     justify-content: left;
     align-content: center;
-    padding-left: 4vw;
+    /* padding-left: 4vw; */
     font-size: 1vw;
 }
 
@@ -455,7 +448,7 @@ img {
 .contact-footer {
     border: 0;
     padding: 0;
-    margin: .6em auto;
+    margin: .6em 0;
     text-align: left;
 }
 
@@ -474,6 +467,8 @@ img {
     display: flex;
     order: 3;
     justify-content: flex-start;
+    margin: 0;
+    padding: 0; 
 }
 
 .contact-wrapper .social-menu a i {
@@ -512,7 +507,7 @@ body {
     grid-row-gap: calc(var(--base-grid)*8);
     grid-column-gap: calc(var(--base-grid)*6);
     grid-template-columns: repeat(auto-fit, minmax(calc(var(--base-grid)*35), 1fr));
-    justify-items: center;
+    justify-items: space-between;
     padding: 0;
 }
 
@@ -541,8 +536,11 @@ body {
 
 .projects li,
 .projects li:before {
-    width: calc(var(--base-grid)*35);
-    height: calc(var(--base-grid)*35);
+    /* width: calc(var(--base-grid)*35);
+    height: calc(var(--base-grid)*35); */
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
 }
 
 .projects a {
@@ -618,4 +616,25 @@ body {
     opacity: 1;
     transform: translateX(calc(var(--base-grid)*1.5));
     transition: opacity .5s ease-in, transform .3s ease-in-out .25s;
+}
+
+/* SIDEWAYS TEXT */
+.sideways-text {
+    --sideways-text-size: calc(6vw + 6vh);
+}
+.sideways-text .sideways-text-innerwrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(-90deg);
+    opacity: .1;
+}
+.sideways-text p {
+    font-size: var(--sideways-text-size);
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+.sideways-text p + p {
+    margin-left: calc(-6vw + -6vh);
 }
