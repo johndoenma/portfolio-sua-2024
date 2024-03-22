@@ -1,7 +1,6 @@
+/* GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,500,700');
-
-
-@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900');
 
 /* VARIABLES */
 html {
@@ -42,6 +41,10 @@ h4 {
 
 h6 {
     font-weight: 500;
+}
+
+p {
+    max-width: 33em;
 }
 
 a {
@@ -198,14 +201,16 @@ img {
 }
 
 .hero h1 {
-    font-size: 10vw;
+    font-size: 8vw;
+    font-size: clamp(4em, 15vw, 13em);
     margin-bottom: 0;
     font-family: bitter, serif;
     color: #3f3f3f;
 }
 
 .hero h2 {
-    font-size: 10vw;
+    font-size: 7vw;
+    font-size: clamp(2em, 8vw, 7em);
     margin-bottom: 0;
     margin-top: 0;
     color: #6aa19d;
@@ -223,16 +228,19 @@ img {
     display: grid;
     justify-content: left;
     align-content: center;
-    /* padding-left: 4vw; */
-    font-size: 1vw;
 }
 
-.hero p {
-    font-size: 2vw;
+.herosub p {
     font-family: Arial, Helvetica, sans-serif;
     color: #3f3f3f;
+    font-size: 2vw;
+    font-size: clamp(1em, 2vw, 2em);
 }
 
+/* MAIN */
+main {
+    padding-bottom: 6em;
+}
 
 /* FOOTER */
 
@@ -458,21 +466,24 @@ img {
 
 .contact-wrapper a.contact-footer:hover i {}
 
-.contact-wrapper a i {
-    width: auto;
-    padding-right: 1em;
+.contact-wrapper a {
+    margin-right: 2em;
 }
 
+.contact-wrapper a i {
+    padding-right: 1em;
+}
 .contact-wrapper .social-menu {
     display: flex;
     order: 3;
     justify-content: flex-start;
+    align-items: center;
     margin: 0;
     padding: 0; 
 }
 
-.contact-wrapper .social-menu a i {
-    padding-right: 0;
+.contact-wrapper .social-menu a {
+    margin-right: 0;
 }
 
 .copy-wrapper:before {
@@ -637,4 +648,15 @@ body {
 }
 .sideways-text p + p {
     margin-left: calc(-6vw + -6vh);
+}
+
+/* SUBPAGE STYLING */
+
+.mockups-img {
+    margin: 0;
+    padding: 0;
+}
+
+.mockups-img li {
+    margin-bottom: 1em;
 }
