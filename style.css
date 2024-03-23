@@ -639,6 +639,7 @@ body {
     right: 0;
     transform: rotate(-90deg);
     opacity: .1;
+    z-index: -1;
 }
 .sideways-text p {
     font-size: var(--sideways-text-size);
